@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "brand-name": "Toyota",
+      "image": "toyota.jpg"
+    },
+    {
+      "id": 2,
+      "brand-name": "Ford",
+      "image": "ford.jpg"
+    },
+    {
+      "id": 3,
+      "brand-name": "BMW",
+      "image": "bmw.jpg"
+    },
+    {
+      "id": 4,
+      "brand-name": "Honda",
+      "image": "honda.jpg"
+    },
+    {
+      "id": 5,
+      "brand-name": "Mercedes-Benz",
+      "image": "mercedes.jpg"
+    },
+    {
+      "id": 6,
+      "brand-name": "Audi",
+      "image": "audi.jpg"
+    }
+  ]
+  
