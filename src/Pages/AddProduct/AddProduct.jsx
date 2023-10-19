@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 
 const AddProduct = () => {
@@ -23,6 +24,13 @@ const AddProduct = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data)
+            Swal.fire({
+                title: 'Success!!',
+                text: 'Add a Coffee Successfully',
+                icon: 'success',
+                confirmButtonText: 'Done'
+              })
+              form.reset('')
         })
       console.log(product)
     }
@@ -49,9 +57,15 @@ const AddProduct = () => {
                         <label className="label">
                             <span className="label-text text-xl font-medium text-[#63433f]">Brand Name</span>
                         </label>
-                        <label className="input-group">
-                            <input type="text" name="brandName" placeholder="Enter Brand Name" className="input input-bordered w-full" />
-                        </label>
+                        <select name="brandName" className="select select-bordered">
+                            <option disabled selected>Pick Brand Name</option>
+                            <option>Toyota</option>
+                            <option>Ford</option>
+                            <option>BMW</option>
+                            <option>Honda</option>
+                            <option>Mercedes-Benz</option>
+                            <option>Audi</option>
+                        </select>
                     </div>
                 </div>
                 {/* category and price row */}

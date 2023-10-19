@@ -3,6 +3,8 @@ import Root from "../Layouts/Root";
 import Home from "../Pages/Home/Home";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import MyCart from "../Pages/MyCart/MyCart";
+import SignUp from "../Users-Login/SignUp";
+import LogIn from "../Users-Login/LogIn";
 
 
 const router = createBrowserRouter([
@@ -13,7 +15,14 @@ const router = createBrowserRouter([
         {
           path: '/' ,
           element: <Home></Home> ,
-          loader: ()=> fetch('/band.json')
+          loader: ()=> fetch('/band.json'),
+          
+        },
+        {
+          path: '/brandProduct/:brandName' ,
+          element: <Home></Home> ,
+          loader: (params)=> fetch(`http://localhost:8000/product/${params.brandName}`)
+          
         },
         {
           path: '/addProduct' ,
@@ -23,6 +32,14 @@ const router = createBrowserRouter([
           path: '/myCart' ,
           element: <MyCart></MyCart> 
         },
+        {
+          path:'/login',
+          element:<LogIn></LogIn>
+      },
+      {
+          path:'/signUp',
+          element:<SignUp></SignUp>
+      }
       ]
     },
   ]);

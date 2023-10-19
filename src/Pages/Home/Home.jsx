@@ -1,10 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
+import BrandCart from "./BrandCart";
 
 
 const Home = () => {
     const brands = useLoaderData()
     console.log(brands)
+    
     return (
         <div>
             <Banner></Banner>
@@ -13,10 +15,7 @@ const Home = () => {
                 <p className="text-sm text-gray-600 font-medium">THE AUTOS WE DEALS IN</p>
                 <div className="grid grid-cols-3 lg:grid-cols-6 gap-5 py-10 mx-10">
                     {
-                        brands.map(brand => <div key={brand.id} className="card hover:bg-white hover:cursor-pointer">
-                            <figure><img className="h-32" src={brand.image} alt="Shoes" /></figure>
-
-                        </div>)
+                        brands.map(brand => <BrandCart  key={brand.id} brand={brand}></BrandCart>)
                     }
                 </div>
             </div>
