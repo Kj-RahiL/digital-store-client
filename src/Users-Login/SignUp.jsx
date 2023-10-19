@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
+import Swal from "sweetalert2";
+import { toast } from "react-toastify";
 
 
 const SignUp = () => {
+    const { createUser } = useContext(AuthContext);
     const handleSignUp = e =>{
         e.preventDefault()
         const form = e.target
@@ -10,7 +15,39 @@ const SignUp = () => {
         const password = form.password.value
         console.log(name,password,email)
 
+        // password validation
+        if (password.length < 6) {
+            toast.error('Password should be 6 character')
+            return;
+        }
+        else if (!/.*[A-Z].*/.test(password)) {
+            toast.error('Please, at least one capital latter')
+            return;
+        }
+        else if (!/.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-].*/.test(password)) {
+            toast.error('Please, at least one special character')
+
+            return;
+        }
+
+        createUser(email, password)
+        .then(result=>{
+            console.log(result.user)
+            Swal.fire({
+                title: 'Success',
+                text: 'User Sign Up Successfully!',
+                icon: 'success',
+                confirmButtonText: 'Done'
+              })
+              form.reset('')
+        })
+        .catch(error=>{
+            console.error(error);
+            toast.error(error.message);
+        })
+       
     }
+    
     return (
         <div className="hero min-h-screen bg-base-200">
                 
@@ -42,7 +79,7 @@ const SignUp = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn bg-pink-500 hover:text-gray-800 text-white">Login</button>
+                            <button className="btn bg-pink-500 hover:text-gray-800 text-white">Sign Up</button>
                         </div>
                         <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                             Already have an account?
@@ -55,6 +92,7 @@ const SignUp = () => {
                         </p>
                     </form>
                 </div>
+                
         </div>
     );
 };

@@ -1,7 +1,28 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../assets/logo.png'
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+    const {user, logOut} = useContext(AuthContext)
+    console.log('navbar photo' ,user?.photoURL)
+    const handleSignOut = () => {
+        logOut()
+            .then(() => {
+                console.log('sign out successfully')
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Do you want to continue',
+                    icon: 'error',
+                    confirmButtonText: 'Cool'
+                  })
+            })
+            .catch(error => {
+                console.error(error.message)
+            })
+    }
+
     const link = <>
         <li><NavLink to="/"
             style={({ isActive }) => {
@@ -77,8 +98,22 @@ const Navbar = () => {
                     {link}
                 </ul>
             </div>
-            <div className="navbar-end ">
-                <Link to='/login' className="btn">Login</Link>
+            <div className="navbar-end">
+                <label className="btn btn-ghost btn-circle avatar">
+                    <div className="w-8 rounded-full">
+                        {
+                            user ? <img src={user?.photoURL} alt="" />
+                            :
+                            <img src="https://i.ibb.co/5M5pv2P/icons8-avatar-48.png" alt="" />
+                        }
+                    </div>
+                </label>
+                {
+                    user ?
+                        <button onClick={handleSignOut} className="btn btn-ghost">SignOut</button>
+                        :
+                        <Link to='/login' className="btn btn-ghost">Login</Link>
+                }
             </div>
         </div>
     );
