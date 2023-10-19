@@ -1,33 +1,33 @@
 [
     {
       "id": 1,
-      "brand-name": "Toyota",
-      "image": "toyota.jpg"
+      "brandName": "Toyota",
+      "image": "https://i.ibb.co/zZpbtPR/toyota.png"
     },
     {
       "id": 2,
-      "brand-name": "Ford",
-      "image": "ford.jpg"
+      "brandName": "Ford",
+      "image": "https://i.ibb.co/MN9Qzx4/ford.png"
     },
     {
       "id": 3,
-      "brand-name": "BMW",
-      "image": "bmw.jpg"
+      "brandName": "BMW",
+      "image": "https://i.ibb.co/k02Pt3f/bmw.png"
     },
     {
       "id": 4,
-      "brand-name": "Honda",
-      "image": "honda.jpg"
+      "brandName": "Honda",
+      "image": "https://i.ibb.co/KbswySP/honda.png"
     },
     {
       "id": 5,
-      "brand-name": "Mercedes-Benz",
-      "image": "mercedes.jpg"
+      "brandName": "Mercedes-Benz",
+      "image": "https://i.ibb.co/nwMxFvg/Mercedes-Benz.png"
     },
     {
       "id": 6,
-      "brand-name": "Audi",
-      "image": "audi.jpg"
+      "brandName": "Audi",
+      "image": "https://i.ibb.co/cy1RGjJ/audi.png"
     }
   ]
   

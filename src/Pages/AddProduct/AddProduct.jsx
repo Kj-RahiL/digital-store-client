@@ -3,7 +3,28 @@
 const AddProduct = () => {
     const handleAddProduct = e =>{
         e.preventDefault()
-        console.log('from add product')
+        const form = e.target 
+        const name = form.name.value
+        const brandName = form.brandName.value
+        const category = form.category.value
+        const price = form.price.value
+        const image = form.image.value
+        const rating = form.rating.value
+        const details = form.details.value
+        const product = {name, brandName, category, price, image, rating, details}
+
+        fetch('http://localhost:8000/product',{
+            method:"POST",
+            headers:{
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(product)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+        })
+      console.log(product)
     }
     return (
         <div className="w-3/4 mx-auto  px-20 py-5 bg-[#f4edebe8] card">
@@ -21,7 +42,7 @@ const AddProduct = () => {
                         <label className="input-group">
                             <input type="text"
                                 name="name"
-                                placeholder="Enter Coffee Name" className="input input-bordered w-full" />
+                                placeholder="Enter Name" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 md:ml-4">
@@ -29,7 +50,7 @@ const AddProduct = () => {
                             <span className="label-text text-xl font-medium text-[#63433f]">Brand Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="number" name="brand-name" placeholder="Enter Brand Name" className="input input-bordered w-full" />
+                            <input type="text" name="brandName" placeholder="Enter Brand Name" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>
@@ -67,7 +88,7 @@ const AddProduct = () => {
                             <span className="label-text text-xl font-medium text-[#63433f]">Rating</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="Rating" placeholder="Enter category rating" className="input input-bordered w-full" />
+                            <input type="text" name="rating" placeholder="Enter category rating" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>
