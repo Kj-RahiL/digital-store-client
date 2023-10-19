@@ -5,12 +5,15 @@ import AddProduct from "../Pages/AddProduct/AddProduct";
 import MyCart from "../Pages/MyCart/MyCart";
 import SignUp from "../Users-Login/SignUp";
 import LogIn from "../Users-Login/LogIn";
+import ErrorElement from "../Pages/ErrorElement/ErrorElement";
+import ContactInfo from "../Pages/Contact/ContactInfo";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorElement></ErrorElement>,
       children:[
         {
           path: '/' ,
@@ -39,6 +42,10 @@ const router = createBrowserRouter([
       {
           path:'/signUp',
           element:<SignUp></SignUp>
+      },
+      {
+          path:'/contact',
+          element:<ContactInfo></ContactInfo>
       }
       ]
     },

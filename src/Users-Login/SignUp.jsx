@@ -30,7 +30,7 @@ const SignUp = () => {
             return;
         }
 
-        createUser(email, password)
+        createUser(email, password, name)
         .then(result=>{
             console.log(result.user)
             Swal.fire({
