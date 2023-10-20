@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 
 const Navbar = () => {
     const {user, logOut} = useContext(AuthContext)
-    console.log('navbar photo' ,user?.photoURL,user?.displayName )
+    // console.log('navbar photo' ,user?.photoURL,user?.displayName )
     const handleSignOut = () => {
         logOut()
             .then(() => {
@@ -53,17 +53,6 @@ const Navbar = () => {
                 };
             }}
         >My Cart</NavLink></li>
-
-        <li><NavLink to="/blogs"
-            style={({ isActive }) => {
-                return {
-                    color: isActive? '#ff3837' : '',
-                    borderBottom: isActive ? "2px solid #ff3837" : "black",
-                    fontWeight: isActive ? "bold" : "",
-                    background: isActive ? "none" : '',
-                };
-            }}
-        >Blog</NavLink></li>
 
         <li><NavLink to="/contact"
             style={({ isActive }) => {

@@ -27,7 +27,10 @@ const Product = ({ product }) => {
                         <Link to={`/details/${_id}`}>
                             <button className="btn normal-case mr-5 hover:bg-[#FF3737] hover:text-white bg-transparent  border-2">Details</button>
                         </Link>
+                        <Link to={`/updateProduct/${_id}`}>
                         <button className="btn normal-case hover:bg-[#FF3737] hover:text-white bg-transparent  border-2">Update</button>
+                        
+                        </Link>
                     </div>
                 </div>
             </div>

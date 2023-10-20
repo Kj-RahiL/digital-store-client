@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 
 const SignUp = () => {
     const { createUser } = useContext(AuthContext);
+    const navigate = useNavigate()
     const handleSignUp = e =>{
         e.preventDefault()
         const form = e.target
@@ -40,6 +41,7 @@ const SignUp = () => {
                 confirmButtonText: 'Done'
               })
               form.reset('')
+              navigate(location?.state? location.state :'/')
         })
         .catch(error=>{
             console.error(error);

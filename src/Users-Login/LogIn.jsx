@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
@@ -7,6 +7,9 @@ import { toast } from "react-toastify";
 
 const LogIn = () => {
     const { signInUser, googleLogin } = useContext(AuthContext)
+    const location = useLocation();
+    const navigate = useNavigate()
+
     const handleLogIn = e => {
         e.preventDefault()
         const form = e.target
@@ -24,6 +27,7 @@ const LogIn = () => {
                     confirmButtonText: 'Done'
                   })
                   form.reset('')
+                  navigate(location?.state? location.state :'/')
             })
             .catch(error => {
                 console.error(error);

@@ -9,6 +9,8 @@ import ErrorElement from "../Pages/ErrorElement/ErrorElement";
 import ContactInfo from "../Pages/Contact/ContactInfo";
 import BrandProduct from "../Pages/BrandProduct/BrandProduct";
 import Details from "../Pages/BrandProduct/Details/Details";
+import Update from "../Pages/BrandProduct/Update/Update";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -26,11 +28,11 @@ const router = createBrowserRouter([
        
         {
           path: '/addProduct' ,
-          element: <AddProduct></AddProduct> 
+          element: <PrivateRoute><AddProduct></AddProduct> </PrivateRoute>
         },
         {
           path: '/myCart' ,
-          element: <MyCart></MyCart> 
+          element: <PrivateRoute><MyCart></MyCart> </PrivateRoute>
         },
         {
           path:'/login',
@@ -51,8 +53,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <Details></Details>,
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:8000/details/${params.id}`)
+      },
+      {
+        path: "/updateProduct/:id",
+        element: <PrivateRoute><Update></Update></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:8000/updateProduct/${params.id}`)
       },
       ]
     },

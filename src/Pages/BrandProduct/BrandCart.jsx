@@ -21,39 +21,3 @@ const BrandCart = ({ brand }) => {
 };
 
 export default BrandCart;
-
-// onClick={() => handleBrandCart(brand.brandName)}
-
-
-//
-// const [name, setName] = useState('')
-// const [products, setProducts] = useState([])
-// const [getProducts, setGetProducts] = useState([])
-// useEffect(() => {
-//     fetch('https://digital-store-server.vercel.app/product')
-//         .then(res => res.json())
-//         .then(data => setProducts(data))
-// }, [])
-
-
-// console.log(products)
-// console.log(getProducts)
-
-// const handleBrandCart = name => {
-//     const brandName = name.toLowerCase()
-
-//     console.log('handle name brand ', brandName)
-//     const loadedProduct = products.filter(product => product.brandName.toLowerCase() === brandName)
-//     console.log(loadedProduct)
-//     setGetProducts(loadedProduct);
-//     // console.log('getProducts:', getProducts);
-
-// }
-
-// useEffect(() => {
-//     console.log('getProducts:', getProducts);
-// }, [getProducts])
-// console.log(getProducts) 
-// here getProducts is null
-
-//
