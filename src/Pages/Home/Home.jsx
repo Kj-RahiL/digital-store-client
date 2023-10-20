@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
-import BrandCart from "./BrandCart";
+import BrandCart from "../BrandProduct/BrandCart";
 import AboutUs from "./About.jsx/AboutUs";
 
 

@@ -7,6 +7,7 @@ import SignUp from "../Users-Login/SignUp";
 import LogIn from "../Users-Login/LogIn";
 import ErrorElement from "../Pages/ErrorElement/ErrorElement";
 import ContactInfo from "../Pages/Contact/ContactInfo";
+import BrandProduct from "../Pages/BrandProduct/BrandProduct";
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
           path:'/contact',
           element:<ContactInfo></ContactInfo>
+      },
+      {
+          path:'/brandProduct',
+          element:<BrandProduct></BrandProduct>
       }
       ]
     },
