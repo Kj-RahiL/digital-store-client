@@ -51,14 +51,14 @@ const SignUp = () => {
     }
     
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-base-200 py-20">
                 
-                <div className="card  w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card  w-full max-w-xl shadow-2xl bg-base-100">
                 <div className="text-center my-5">
                     <h1 className="text-5xl text-pink-500 font-bold">Sign Up!</h1>
 
                 </div>
-                    <form onSubmit={handleSignUp} className="card-body">
+                    <form onSubmit={handleSignUp} className="card-body mx-5">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>

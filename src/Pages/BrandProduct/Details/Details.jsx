@@ -1,10 +1,33 @@
-import { Link, useLoaderData } from "react-router-dom";
+import {  useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const Details = () => {
     const product = useLoaderData()
-    const {_id, name, category, image, price, details } = product
-    console.log(product)
+    const { name, category, image, price, details } = product
+
+    const handleMycart = e =>{
+        e.preventDefault()
+
+        fetch('https://digital-store-server-b5c0xcwlh-rahis-projects.vercel.app/myCart',{
+            method:"POST",
+            headers:{
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(product)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+            Swal.fire({
+                title: 'Success!!',
+                text: 'Add a Coffee Successfully',
+                icon: 'success',
+                confirmButtonText: 'Done'
+              })
+        })
+      console.log(product)
+    }
     return (
         <div className="max-w-xl mx-auto px-2 py-20">
             <div className="card md:card-side card-compact bg-base-300  ">
@@ -20,9 +43,9 @@ const Details = () => {
                         
                     </div>
                     <div className="card-actions justify-end ">
-                        <Link to={`/details/${_id}`}>
-                            <button className="btn normal-case hover:text-black bg-[#FF3737] text-white hover:bg-transparent  border-2">Add to Cart</button>
-                        </Link>
+                        {/* <Link to={`/myCart`}> */}
+                            <button onClick={handleMycart} className="btn normal-case hover:text-black bg-[#FF3737] text-white hover:bg-transparent  border-2">Add to Cart</button>
+                        {/* </Link> */}
                         
                     </div>
                 </div>

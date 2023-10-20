@@ -25,35 +25,35 @@ const LogIn = () => {
                     text: 'User Log In Successfully!',
                     icon: 'success',
                     confirmButtonText: 'Done'
-                  })
-                  form.reset('')
-                  navigate(location?.state? location.state :'/')
+                })
+                form.reset('')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.error(error);
-                toast.error("Oops!! password or email doesn't match. please valid password or email" );
+                toast.error("Oops!! password or email doesn't match. please valid password or email");
             })
 
     }
 
-    const handleGoogleLogin = ()=>{
+    const handleGoogleLogin = () => {
         googleLogin()
-        .then(result=>{
-            console.log('from login',result.user)
-        })
-        .catch(error=>{
-            console.error(error.message);
-        })
+            .then(result => {
+                console.log('from login', result.user)
+            })
+            .catch(error => {
+                console.error(error.message);
+            })
     }
     return (
-        <div className="hero card bg-base-200">
+        <div className="p-5 md:py-10 hero ">
 
-            <div className=" card w-full max-w-sm shadow-2xl bg-base-100">
-                <div className="text-center">
-                    <h1 className="text-5xl font-bold">Sign In!</h1>
+            <div className=" card w-full max-w-xl shadow-2xl bg-base-100 ">
+                <div className="text-center mt-2">
+                    <h1 className="text-5xl text-amber-500 font-bold">Sign In!</h1>
 
                 </div>
-                <form onSubmit={handleLogIn} className="card-body">
+                <form onSubmit={handleLogIn} className="card-body md:mx-8">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
@@ -70,13 +70,13 @@ const LogIn = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn bg-gray-400">Sig In</button>
+                        <button className="btn text-white hover:text-gray-800 normal-case bg-amber-500 font-semibold text-lg">Sign In</button>
 
                     </div>
                     <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                         Already have an account?
                         <Link
-                            className="font-medium text-pink-500 transition-colors hover:text-blue-700"
+                            className="font-medium text-amber-500 transition-colors hover:text-blue-700"
                             to='/signUp'
                         >
                             Sign Up
@@ -87,13 +87,13 @@ const LogIn = () => {
                     <hr className="w-2/5 border" />
                     <span className="text-base font-medium">or</span>
                     <hr className="w-2/5 border" />
-                    
+
                 </div>
-                <div className="space-y-3 mb-10">
-                    <div onClick={handleGoogleLogin}>
-                        <h2 className="flex justify-center btn text-xl font-medium"><FcGoogle></FcGoogle> Google</h2>
-                    </div>
+
+                <div className="mx-auto mb-5">
+                    <button onClick={handleGoogleLogin} className="flex justify-center btn text-xl normal-case font-medium"><FcGoogle></FcGoogle> Google</button>
                 </div>
+
             </div>
 
         </div>
