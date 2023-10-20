@@ -6,7 +6,7 @@ import AboutUs from "./About.jsx/AboutUs";
 
 const Home = () => {
     const brands = useLoaderData()
-    console.log(brands)
+    // console.log(brands)
     
     return (
         <div>

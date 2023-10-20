@@ -8,6 +8,7 @@ import LogIn from "../Users-Login/LogIn";
 import ErrorElement from "../Pages/ErrorElement/ErrorElement";
 import ContactInfo from "../Pages/Contact/ContactInfo";
 import BrandProduct from "../Pages/BrandProduct/BrandProduct";
+import Details from "../Pages/BrandProduct/Details/Details";
 
 
 const router = createBrowserRouter([
@@ -22,12 +23,7 @@ const router = createBrowserRouter([
           loader: ()=> fetch('/band.json'),
           
         },
-        {
-          path: '/brandProduct/:brandName' ,
-          element: <Home></Home> ,
-          loader: (params)=> fetch(`http://localhost:8000/product/${params.brandName}`)
-          
-        },
+       
         {
           path: '/addProduct' ,
           element: <AddProduct></AddProduct> 
@@ -49,9 +45,15 @@ const router = createBrowserRouter([
           element:<ContactInfo></ContactInfo>
       },
       {
-          path:'/brandProduct',
-          element:<BrandProduct></BrandProduct>
-      }
+          path:'/brandProduct/:brandName',
+          element:<BrandProduct></BrandProduct>,
+          loader: ({ params })=> fetch(`/band.json/${params.brandName}`)
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>,
+        loader: ({ params }) => fetch(`http://localhost:8000/details/${params.id}`)
+      },
       ]
     },
   ]);
