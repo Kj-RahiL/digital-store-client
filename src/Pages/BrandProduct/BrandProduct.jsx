@@ -26,7 +26,7 @@ const BrandProduct = () => {
         <div>
             <Slider></Slider>
             <h2 className="text-center text-4xl font-semibold my-10">Type of Vehicles of Our Brand <span className="text-pink-500">{brandName}</span></h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:mx-20 ">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mx-5 md:mx-20 ">
                 {
                     loadedProduct.map((product, index) => <Product key={index} product={product}></Product>)
                 }

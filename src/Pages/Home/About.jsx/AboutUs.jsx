@@ -4,7 +4,7 @@ const AboutUs = () => {
     return (
         <div>
             <h2 className="text-3xl text-center font-semibold my-10">Our Advantages</h2>
-            <div className="grid lg:grid-cols-3 gap-5 mx-20">
+            <div className="grid lg:grid-cols-3 gap-5 mx-10 md:mx-20">
                 <div className="card card-compact bg-base-100 shadow-xl">
                     <h2 className="text-8xl mx-auto py-6"><GiSteeringWheel></GiSteeringWheel></h2>
                     <div className="card-body">

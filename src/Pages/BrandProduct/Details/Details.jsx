@@ -6,10 +6,10 @@ const Details = () => {
     const {_id, name, category, image, price, details } = product
     console.log(product)
     return (
-        <div className="max-w-xl mx-auto py-20">
-            <div className="card card-side card-compact bg-base-300  ">
-                <figure className="h-60 w-1/2"><img className="h-full w-full" src={image} alt="Shoes" /></figure>
-                <div className="card-body space-y-2 w-1/2">
+        <div className="max-w-xl mx-auto px-2 py-20">
+            <div className="card md:card-side card-compact bg-base-300  ">
+                <figure className="h-60 w-full md:w-1/2"><img className="h-full w-full" src={image} alt="Shoes" /></figure>
+                <div className="card-body space-y-2 w-full md:w-1/2">
                     <h2 className="font-semibold text-3xl">{name}</h2>
                     <div className="flex justify-between text-xl font-light text-gray-500">
                         <h2 className="">{category}</h2>
