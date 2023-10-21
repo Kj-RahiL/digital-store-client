@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import BrandCart from "../BrandProduct/BrandCart";
 import AboutUs from "./About.jsx/AboutUs";
 import ContactUs from "../Contact/ContactUs";
+import DarkMode from "../../darkmood/DarkMood";
 
 
 const Home = () => {

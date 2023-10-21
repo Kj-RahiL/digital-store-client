@@ -4,7 +4,8 @@ import { ImCross } from "react-icons/im";
 
 
 const CardCart = ({ cart, carts, setCarts }) => {
-    const {_id, name, brandName, image, price } = cart
+    const {_id, name, category
+        , image, price } = cart
 
     console.log(carts)
    
@@ -49,7 +50,7 @@ const CardCart = ({ cart, carts, setCarts }) => {
                 </div>
             </td>
             <td className="bg-slate-500"> {name}</td>
-            <td>{brandName}</td>
+            <td>{category}</td>
             <td className="bg-slate-500">{price}</td>
             <th>
             <button onClick={() => handleDelete(_id)} className="btn btn-ghost text-slate-50"><ImCross></ImCross></button>
