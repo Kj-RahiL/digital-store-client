@@ -3,7 +3,7 @@
 
 ### live link: https://digital-store-7fd09.web.app
 
-### database link : https://digital-store-server-b5c0xcwlh-rahis-projects.vercel.app/product
+### database link : https://digital-store-server-aqarlthqi-rahis-projects.vercel.app/product
 
 
 #### Website Features

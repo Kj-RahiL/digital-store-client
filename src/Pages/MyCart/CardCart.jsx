@@ -2,10 +2,12 @@
 import Swal from "sweetalert2";
 import { ImCross } from "react-icons/im";
 
+
 const CardCart = ({ cart, carts, setCarts }) => {
     const {_id, name, brandName, image, price } = cart
-    
 
+    console.log(carts)
+   
     const handleDelete = _id => {
         console.log('handle delete' , _id)
         Swal.fire({
@@ -18,7 +20,7 @@ const CardCart = ({ cart, carts, setCarts }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:8000/myCart/${_id}`, {
+                fetch(`https://digital-store-server-aqarlthqi-rahis-projects.vercel.app/myCart/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

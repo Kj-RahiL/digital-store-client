@@ -1,20 +1,29 @@
+import { useContext } from "react";
 import {  useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 
 const Details = () => {
     const product = useLoaderData()
+
+    const {user} = useContext(AuthContext)
+    const email = user.email
+    console.log(email)
+
     const { name, category, image, price, details } = product
 
+    const addedProduct = {name, category, image, price, details, email }
+    console.log(addedProduct)
     const handleMycart = e =>{
         e.preventDefault()
 
-        fetch('https://digital-store-server-b5c0xcwlh-rahis-projects.vercel.app/myCart',{
+        fetch('https://digital-store-server-aqarlthqi-rahis-projects.vercel.app/myCart',{
             method:"POST",
             headers:{
                 'content-type' : 'application/json'
             },
-            body: JSON.stringify(product)
+            body: JSON.stringify(addedProduct)
         })
         .then(res=>res.json())
         .then(data=>{

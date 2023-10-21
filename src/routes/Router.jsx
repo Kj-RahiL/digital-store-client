@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         {
           path: '/myCart' ,
           element: <PrivateRoute><MyCart></MyCart> </PrivateRoute>,
-          loader: ()=>fetch('http://localhost:8000/myCart')
+          loader: ()=>fetch('https://digital-store-server-aqarlthqi-rahis-projects.vercel.app/myCart')
         },
         {
           path:'/login',
@@ -55,12 +55,12 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://digital-store-server-b5c0xcwlh-rahis-projects.vercel.app/details/${params.id}`)
+        loader: ({ params }) => fetch(`https://digital-store-server-aqarlthqi-rahis-projects.vercel.app/details/${params.id}`)
       },
       {
         path: "/updateProduct/:id",
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://digital-store-server-b5c0xcwlh-rahis-projects.vercel.app/updateProduct/${params.id}`)
+        loader: ({ params }) => fetch(`https://digital-store-server-aqarlthqi-rahis-projects.vercel.app/updateProduct/${params.id}`)
       },
       ]
     },

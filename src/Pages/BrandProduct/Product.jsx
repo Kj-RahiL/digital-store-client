@@ -1,10 +1,14 @@
 
 import { Link } from "react-router-dom";
+import { Rating } from "@material-tailwind/react";
+ 
 
 
 const Product = ({ product }) => {
     const {_id, name, brandName, category, image, price, rating } = product
-    console.log(product?._id)
+    // console.log(typeof(rating))
+    
+
     return (
         <div>
             <div className="card card-compact bg-base-300 ">
@@ -18,9 +22,9 @@ const Product = ({ product }) => {
                     <div className="flex justify-between text-lg font-normal text-gray-500" >
                         <p>Price:{price}</p>
                         <div>
-                            <p>Rating: <span className="text-pink-600">{rating}</span>/5</p>
+                            {/* <p>Rating: <span className="text-pink-600">{rating}</span>/5</p> */}
 
-
+                            <Rating value={parseInt(rating)} readonly />
                         </div>
                     </div>
                     <div className="card-actions justify-end text-black">
