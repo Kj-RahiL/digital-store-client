@@ -13,6 +13,8 @@ import Update from "../Pages/BrandProduct/Update/Update";
 import PrivateRoute from "./PrivateRoute";
 import Blog from "../Pages/Blog/Blog";
 import Contact from "../Pages/Contact/Contact";
+import Service from "../Pages/Service/Service";
+import ServiceCheckOut from "../Pages/Service/ServiceCheckOut";
 
 
 const router = createBrowserRouter([
@@ -47,7 +49,12 @@ const router = createBrowserRouter([
       },
       {
           path:'/service',
-          element:<ContactInfo></ContactInfo>
+          element:<Service></Service>
+      },
+      {
+          path:'/checkoutService/:id',
+          element:<ServiceCheckOut></ServiceCheckOut>,
+          loader: ({params})=>fetch(`http://localhost:8000/services/${params.id}`)
       },
       {
           path:'/blog',

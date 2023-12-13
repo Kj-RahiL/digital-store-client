@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 const Contact = () => {
 
     const form = useRef();
-    console.log(form)
     const sendEmail = (e) => {
         e.preventDefault();
+// console.log(form.current)
 
         emailjs.sendForm('service_y50kg0d', 'template_zesnv3q', form.current, 'SbscWwTck4Ol-xKfC')
             .then(() => {
