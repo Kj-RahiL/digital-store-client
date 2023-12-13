@@ -35,6 +35,7 @@ const CardCart = ({ cart, carts, setCarts }) => {
                             )
                             const remaining = carts.filter(cart=> cart._id !== _id)
                             setCarts(remaining)
+                            // const remaining = carts.fi
                         }
                     })
 

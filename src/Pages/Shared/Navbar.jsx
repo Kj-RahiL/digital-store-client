@@ -54,6 +54,24 @@ const Navbar = () => {
             }}
         >My Cart</NavLink></li>
 
+        <li><NavLink to="/service"
+            style={({ isActive }) => {
+                return {
+                    color: isActive? '#ff3837' : '',
+                    borderBottom: isActive ? "2px solid #ff3837" : "black",
+                    fontWeight: isActive ? "bold" : "",
+                    background: isActive ? "none" : '',
+                };
+            }}>Service</NavLink></li>
+        <li><NavLink to="/blog"
+            style={({ isActive }) => {
+                return {
+                    color: isActive? '#ff3837' : '',
+                    borderBottom: isActive ? "2px solid #ff3837" : "black",
+                    fontWeight: isActive ? "bold" : "",
+                    background: isActive ? "none" : '',
+                };
+            }}>Blog</NavLink></li>
         <li><NavLink to="/contact"
             style={({ isActive }) => {
                 return {

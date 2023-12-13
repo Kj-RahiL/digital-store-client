@@ -1,0 +1,51 @@
+[
+    {
+      "title": "Top 10 Electric Cars of 2023",
+      "image": "https://i.ibb.co/qFBTv9K/fernando-marques-dz-ZV4-Pp-Q-NI-unsplash.jpg",
+      "category": "Electric Vehicles",
+      "description": "Explore the latest advancements in electric vehicle technology and discover the top 10 electric cars making waves in 2023.",
+      "author": "John Doe",
+      "published_date": "2023-04-15"
+    },
+    {
+      "title": "The Future of Autonomous Vehicles",
+      "image": "https://i.ibb.co/CMPLKmJ/pexels-neil-kelly-712618.jpg",
+      "category": "Technology",
+      "description": "Delve into the world of self-driving cars and the technological breakthroughs shaping the future of transportation.",
+      "author": "Jane Smith",
+      "published_date": "2023-03-22"
+    },
+    {
+      "title": "Classic Cars: Timeless Beauties on the Road",
+      "image": "https://i.ibb.co/RCkFTwx/lance-asper-Wl6-Oe-SGy-Of4-unsplash.jpg",
+      "category": "Classics",
+      "description": "Take a nostalgic journey through the history of classic cars, exploring the timeless designs and enduring appeal of these automotive treasures.",
+      "author": "Michael Johnson",
+      "published_date": "2023-02-10"
+    },
+    {
+      "title": "Safety Features Every Car Should Have",
+      "image": "https://i.ibb.co/BgfZXV4/white-truck-with-word-gmc-front.jpg",
+      "category": "Safety",
+      "description": "Learn about the essential safety features that contribute to making modern cars safer for drivers, passengers, and pedestrians.",
+      "author": "Emma Davis",
+      "published_date": "2023-01-05"
+    },
+    {
+        "title": "Green Driving: The Rise of Eco-Friendly Cars",
+        "image": "https://i.ibb.co/MGy7bV9/7046337-1588.jpg ",
+        "category": "Environment",
+        "description": "Discover the eco-conscious side of the automotive industry, exploring the innovations and benefits of eco-friendly cars that contribute to a greener and sustainable future.",
+        "author": "David Greenfield",
+        "published_date": "2023-07-25"
+      },
+      {
+        "title": "Exploring Off-Road Adventures: The Best 4x4 Vehicles",
+        "image": "https://i.ibb.co/Bz1DnqX/banner.jpg",
+        "category": "Off-Road",
+        "description": "Embark on an exciting journey into the world of off-road driving as we showcase the best 4x4 vehicles designed for rugged terrains and thrilling adventures.",
+        "author": "Alex Turner",
+        "published_date": "2023-05-18"
+      }
+  ]
+  

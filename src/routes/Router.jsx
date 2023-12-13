@@ -11,6 +11,7 @@ import BrandProduct from "../Pages/BrandProduct/BrandProduct";
 import Details from "../Pages/BrandProduct/Details/Details";
 import Update from "../Pages/BrandProduct/Update/Update";
 import PrivateRoute from "./PrivateRoute";
+import Blog from "../Pages/Blog/Blog";
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,14 @@ const router = createBrowserRouter([
       {
           path:'/signUp',
           element:<SignUp></SignUp>
+      },
+      {
+          path:'/service',
+          element:<ContactInfo></ContactInfo>
+      },
+      {
+          path:'/blog',
+          element:<Blog></Blog>
       },
       {
           path:'/contact',
