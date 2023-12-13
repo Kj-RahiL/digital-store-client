@@ -3,6 +3,7 @@ import { BsHouseAdd, BsMailbox, BsPhone, } from "react-icons/bs";
 const ContactInfo = () => {
     return (
         <div className="bg-white">
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 mx-20 justify-center text-white py-20  gap-10">
                 <div className="card w-1/2 h-32 bg-base-100 shadow-xl image-full">
                     <figure><img className="w-full" src='https://i.ibb.co/CtW3qKz/blurry-gradient-haikei.png' alt="Shoes" /></figure>

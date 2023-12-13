@@ -12,6 +12,7 @@ import Details from "../Pages/BrandProduct/Details/Details";
 import Update from "../Pages/BrandProduct/Update/Update";
 import PrivateRoute from "./PrivateRoute";
 import Blog from "../Pages/Blog/Blog";
+import Contact from "../Pages/Contact/Contact";
 
 
 const router = createBrowserRouter([
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
           path:'/contact',
-          element:<ContactInfo></ContactInfo>
+          element:<Contact></Contact>
       },
       {
           path:'/brandProduct/:brandName',
